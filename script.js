@@ -194,3 +194,18 @@ if (form) {
     success.hidden = false
   })
 }
+
+/* ---------- Imágenes: sin menú contextual ni arrastre ---------- */
+/* Es fricción, no seguridad: una foto ya descargada al navegador siempre se
+   puede recuperar. La protección real va en el hosting y en el peso del archivo. */
+document.addEventListener('contextmenu', function (e) {
+  if (e.target.tagName === 'IMG') e.preventDefault()
+})
+
+document.addEventListener('dragstart', function (e) {
+  if (e.target.tagName === 'IMG') e.preventDefault()
+})
+
+document.querySelectorAll('img').forEach(function (img) {
+  img.draggable = false
+})

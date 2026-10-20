@@ -57,6 +57,9 @@ body.no-scroll {
 img {
   display: block;
   max-width: 100%;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+  user-select: none;
 }
 
 a {
