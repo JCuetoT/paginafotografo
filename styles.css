@@ -1077,11 +1077,11 @@ em {
   z-index: 1;
   background: linear-gradient(
     to top,
-    rgba(18, 18, 18, 0.97),
-    rgba(18, 18, 18, 0.85) 35%,
-    rgba(18, 18, 18, 0.45) 65%,
-    rgba(18, 18, 18, 0.1) 85%,
-    transparent
+    rgba(18, 18, 18, 0.96),
+    rgba(18, 18, 18, 0.9) 30%,
+    rgba(18, 18, 18, 0.72) 60%,
+    rgba(18, 18, 18, 0.5) 80%,
+    rgba(18, 18, 18, 0.38)
   );
 }
 
@@ -1201,17 +1201,11 @@ em {
   display: block;
 }
 
-.slideshow-block:hover .slideshow-block-shade {
-  opacity: 1;
-}
-
 .slideshow-block-shade {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(to top, rgba(18, 18, 18, 0.9), transparent 60%);
-  opacity: 0.75;
-  transition: opacity 0.5s;
+  background: linear-gradient(to top, rgba(18, 18, 18, 0.97), rgba(18, 18, 18, 0.6) 55%, rgba(18, 18, 18, 0.2));
 }
 
 .slideshow-block-info {
