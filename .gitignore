@@ -1,0 +1,7 @@
+# Material de archivo ajeno a la web (cursos, PDFs, HTML recuperados)
+RECUPERADOS/
+
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store
