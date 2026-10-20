@@ -994,6 +994,18 @@ em {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top center;
+}
+
+/* Retratos verticales: el rostro está en el tercio superior, no en el borde */
+.page-hero-img--face {
+  object-position: 50% 30%;
+}
+
+/* Las piezas de branding y los logos también se amplían al hacer clic */
+.brand-card,
+.logo-item {
+  cursor: zoom-in;
 }
 
 .page-hero-shade {
@@ -1006,6 +1018,24 @@ em {
   position: relative;
   z-index: 1;
   width: 100%;
+}
+
+.hero-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mist);
+  transition: color 0.3s var(--ease);
+}
+
+.hero-back:hover,
+.hero-back:focus-visible {
+  color: var(--fog);
 }
 
 .page-hero-content h1 {
@@ -1041,9 +1071,14 @@ em {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top center;
   opacity: 0;
   transform: scale(1.05);
   transition: opacity 1.2s var(--ease), transform 8s linear;
+}
+
+.slideshow-block--face .slideshow-img {
+  object-position: 50% 30%;
 }
 
 .slideshow-img.active {
@@ -1327,8 +1362,8 @@ em {
 }
 
 .lightbox-img {
-  max-width: 92vw;
-  max-height: 84vh;
+  max-width: 96vw;
+  max-height: 92vh;
   object-fit: contain;
   border-radius: 0.25rem;
 }

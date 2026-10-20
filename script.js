@@ -109,7 +109,7 @@ document.querySelectorAll('[data-slideshow]').forEach(function (box) {
 })
 
 /* ---------- Lightbox (galería grande al hacer clic) ---------- */
-var galleryItems = document.querySelectorAll('.gallery-item')
+var galleryItems = document.querySelectorAll('.gallery-item, .brand-card, .logo-item')
 if (galleryItems.length) {
   var lightbox = document.createElement('div')
   lightbox.className = 'lightbox'
@@ -151,6 +151,7 @@ if (galleryItems.length) {
 
   galleryItems.forEach(function (item, idx) {
     item.addEventListener('click', function (e) {
+      if (e.target.closest('.brand-cta')) return
       e.preventDefault()
       open(idx)
     })
