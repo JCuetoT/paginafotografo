@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jcuetot.github.io/paginafotografo/sitemap.xml
