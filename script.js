@@ -78,6 +78,18 @@ var revealObserver = new IntersectionObserver(
 
 document.querySelectorAll('.reveal').forEach(function (el) { revealObserver.observe(el) })
 
+/* Si el usuario salta de golpe (un ancla o un desliz muy rápido), el observador
+   puede pasar por alto elementos que quedaron por encima: los revelamos igual. */
+window.addEventListener(
+  'scroll',
+  function () {
+    document.querySelectorAll('.reveal:not(.visible)').forEach(function (el) {
+      if (el.getBoundingClientRect().top < window.innerHeight * 0.9) el.classList.add('visible')
+    })
+  },
+  { passive: true }
+)
+
 /* ---------- Slideshow automático (las fotos cambian solas) ---------- */
 document.querySelectorAll('[data-slideshow]').forEach(function (box) {
   var imgs = box.querySelectorAll('.slideshow-img')

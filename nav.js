@@ -12,9 +12,9 @@
   ]
 
   var socials = [
-    { label: 'Instagram', href: 'https://instagram.com' },
-    { label: 'Behance', href: 'https://behance.net' },
-    { label: 'YouTube', href: 'https://youtube.com' }
+    { label: 'Instagram', href: 'https://www.instagram.com/kevinsanjuan70/' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/kevin-sanjuan-berdugo-024667403/' },
+    { label: 'YouTube', href: 'https://www.youtube.com/@kevinsanjuan8070' }
   ]
 
   var header = document.createElement('header')
