@@ -1075,7 +1075,14 @@ em {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(to top, rgba(18, 18, 18, 0.92), rgba(18, 18, 18, 0.15) 55%, transparent);
+  background: linear-gradient(
+    to top,
+    rgba(18, 18, 18, 0.97),
+    rgba(18, 18, 18, 0.85) 35%,
+    rgba(18, 18, 18, 0.45) 65%,
+    rgba(18, 18, 18, 0.1) 85%,
+    transparent
+  );
 }
 
 .showcase-content {
@@ -1549,6 +1556,48 @@ em {
   .brand-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
+  }
+}
+
+/* ---------- Logotipos (branding.html) ---------- */
+
+.logos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  aspect-ratio: 4 / 3;
+  background: var(--fog);
+  border-radius: 0.375rem;
+}
+
+/* Logos con texto claro sobre fondo transparente */
+.logo-item--dark {
+  background: var(--coal);
+}
+
+.logo-item img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .logos-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .logo-item {
+    padding: 1.75rem;
   }
 }
 

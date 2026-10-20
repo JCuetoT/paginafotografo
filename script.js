@@ -81,8 +81,19 @@ document.querySelectorAll('.reveal').forEach(function (el) { revealObserver.obse
 /* ---------- Slideshow automático (las fotos cambian solas) ---------- */
 document.querySelectorAll('[data-slideshow]').forEach(function (box) {
   var imgs = box.querySelectorAll('.slideshow-img')
-  var dots = box.querySelectorAll('.slideshow-dot')
   if (imgs.length < 2) return
+
+  /* Los puntos se generan solos: siempre hay uno por foto */
+  var dotBox = box.querySelector('.showcase-dots')
+  if (dotBox) {
+    dotBox.innerHTML = ''
+    for (var d = 0; d < imgs.length; d++) {
+      var dot = document.createElement('span')
+      dot.className = 'slideshow-dot'
+      dotBox.appendChild(dot)
+    }
+  }
+  var dots = box.querySelectorAll('.slideshow-dot')
 
   var i = 0
   imgs[i].classList.add('active')
